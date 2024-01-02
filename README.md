@@ -10,4 +10,5 @@ Saw this somewhere and thought it was very simple and people were gatekeeping it
 
 ## Links
 Discord: https://discord.gg/vWuwWPckhB
+
 Webstore: https://fsgscripts.tebex.io

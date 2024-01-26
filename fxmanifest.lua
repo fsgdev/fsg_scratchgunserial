@@ -7,7 +7,7 @@ game         'gta5'
 --[[ Resource Information ]]--
 name         'fsg_scratchgunserial'
 author       'github.com/fsgdev'
-version      '1.0.0'
+version      '1.0.1'
 description  'Scratch serial numbers off guns / weapons'
 
 --[[ Manifest ]]--
@@ -17,9 +17,19 @@ dependencies {
 }
 
 shared_scripts {
-	'@ox_lib/init.lua'
+	'@ox_lib/init.lua',
+	'shared.lua',
+}
+
+files {
+	'locales/en.json',
+	'config/server.lua'
+}
+
+client_scripts {
+	'client/main.lua',
 }
 
 server_scripts {
-	'server.lua',
+	'server/main.lua',
 }

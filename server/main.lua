@@ -21,9 +21,9 @@ scratchGunSerial = function(source)
     local weapon = inv:GetCurrentWeapon(source)
     if weapon ~= nil then
         if config.progressBar.enabled then
+            weapon.metadata.serial = locale('serial_number')
             local progressbar = lib.callback.await('fsg_scratchgunserial:progressBar', source, config.progressBar.duration)
             if progressbar then
-                weapon.metadata.serial = locale('serial_number')
                 inv:SetMetadata(source, weapon.slot, weapon.metadata)
                 if config.chatNotify.enabled then
                     TriggerClientEvent("chat:addMessage", source, {
@@ -35,7 +35,6 @@ scratchGunSerial = function(source)
                 end
             end
         else
-            weapon.metadata.serial = locale('serial_number')
             inv:SetMetadata(source, weapon.slot, weapon.metadata)
             if config.chatNotify.enabled then
                 TriggerClientEvent("chat:addMessage", source, {
